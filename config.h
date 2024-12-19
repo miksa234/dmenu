@@ -14,11 +14,12 @@ static char normfgcolor[] = "#bcbcbc";
 static char normbgcolor[] = "#000000";
 static char selfgcolor[]  = "#000000";
 static char selbgcolor[]  = "#bcbcbc";
+static char bordercolor[]  = "#642b2b";
 static char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { normfgcolor, normbgcolor },
 	[SchemeSel] = { selfgcolor, selbgcolor },
-	[SchemeOut] = { "#642b2b", "#00ffff" },
+	[SchemeOut] = { bordercolor, "#00ffff" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
 static unsigned int lines      = 0;
@@ -41,5 +42,6 @@ ResourcePref resources[] = {
 	{ "normbgcolor", STRING, &normbgcolor },
 	{ "selfgcolor",  STRING, &selfgcolor },
 	{ "selbgcolor",  STRING, &selbgcolor },
+	{ "bordercolor",  STRING, &bordercolor },
 	{ "prompt",      STRING, &prompt },
 };
